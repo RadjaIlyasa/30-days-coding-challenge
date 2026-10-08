@@ -1,0 +1,143 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    color-scheme: dark;
+    --page: #10131c;
+    --card: #191e2b;
+    --card-border: #2b3344;
+    --text: #f3f5fb;
+    --muted: #969fb2;
+    --accent: #a8f078;
+    --accent-soft: rgba(168, 240, 120, .12);
+    --slot: #202737;
+    --shadow: 0 24px 80px rgba(0, 0, 0, .3);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 24px;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(93, 115, 162, .15), transparent 55%),
+        var(--page);
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    transition: background .25s ease, color .25s ease;
+}
+
+.clock-card {
+    width: min(100%, 720px);
+    padding: clamp(22px, 5vw, 42px);
+    border: 1px solid var(--card-border);
+    border-radius: 28px;
+    background: var(--card);
+    box-shadow: var(--shadow);
+    transition: background .25s ease, border-color .25s ease;
+}
+
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.eyebrow { margin: 0; color: var(--muted); font-size: .72rem; font-weight: 700; letter-spacing: .2em; }
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 42px;
+    padding: 0 14px;
+    border: 1px solid var(--card-border);
+    border-radius: 999px;
+    background: var(--slot);
+    color: var(--text);
+    font: inherit;
+    font-size: .8rem;
+    cursor: pointer;
+    transition: transform .2s ease, background .2s ease;
+}
+.theme-toggle:hover { transform: translateY(-2px); }
+.theme-toggle:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.theme-icon { color: var(--accent); font-size: 1rem; }
+
+.clock-content { padding: clamp(48px, 9vw, 78px) 0 clamp(36px, 7vw, 58px); text-align: center; }
+.day { margin: 0 0 12px; color: var(--accent); font-size: clamp(.8rem, 2vw, .95rem); font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.clock {
+    color: var(--text);
+    font-family: 'DM Mono', 'Courier New', monospace;
+    font-size: clamp(3.5rem, 15vw, 7.8rem);
+    font-weight: 500;
+    letter-spacing: -.09em;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+.date { margin: 18px 0 0; color: var(--muted); font-size: clamp(.9rem, 2.4vw, 1.05rem); }
+
+.meme-slot {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 116px;
+    padding: 16px;
+    border: 1px dashed var(--card-border);
+    border-radius: 18px;
+    background: var(--slot);
+}
+.meme-placeholder {
+    display: grid;
+    flex: 0 0 82px;
+    height: 82px;
+    place-items: center;
+    border-radius: 13px;
+    background: var(--accent-soft);
+    font-size: 2rem;
+}
+.meme-copy p { margin: 0; }
+.meme-title { font-weight: 700; }
+.meme-hint { margin-top: 5px !important; color: var(--muted); font-size: .88rem; }
+
+body.light-theme {
+    color-scheme: light;
+    --page: #fff2e8;
+    --card: #fffdfb;
+    --card-border: #f2d8c9;
+    --text: #302348;
+    --muted: #766b83;
+    --accent: #e6538a;
+    --accent-soft: rgba(255, 178, 66, .22);
+    --slot: #fff0d9;
+    --shadow: 0 24px 80px rgba(145, 77, 106, .16);
+}
+body.light-theme {
+    background:
+        radial-gradient(ellipse at 12% 16%, rgba(255, 190, 93, .34), transparent 32%),
+        radial-gradient(ellipse at 88% 78%, rgba(244, 143, 183, .3), transparent 36%),
+        radial-gradient(ellipse at 80% 8%, rgba(138, 194, 255, .28), transparent 30%),
+        var(--page);
+}
+body.light-theme .clock-card {
+    background: linear-gradient(145deg, #fffdfb 5%, #fff8f1 100%);
+    border-color: #f0d6d1;
+}
+body.light-theme .meme-slot {
+    border-color: #efb2c8;
+    background: linear-gradient(110deg, #fff0d9, #ffe6ef 62%, #e9f3ff);
+}
+body.light-theme .meme-placeholder { background: linear-gradient(145deg, #ffd875, #ffabc5); }
+body.light-theme .theme-toggle { border-color: #efc8d0; background: #fff0f4; }
+
+@media (max-width: 420px) {
+    body { padding: 14px; }
+    .clock-card { border-radius: 22px; }
+    .theme-label { display: none; }
+    .theme-toggle { width: 42px; justify-content: center; padding: 0; }
+    .meme-slot { min-height: 100px; }
+    .meme-placeholder { flex-basis: 66px; height: 66px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
+
