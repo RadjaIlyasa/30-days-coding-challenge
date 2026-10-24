@@ -1,0 +1,629 @@
+:root {
+    color-scheme: light;
+    font-family: "Inter", "Segoe UI", sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+
+    --color-background: #0C2C55;
+    --color-accent: #296374;
+    --color-accent-light: #629FAD;
+    --color-surface: #EDEDCE;
+    --color-ink: #0C2C55;
+    --color-muted: #296374;
+    --color-on-background: #EDEDCE;
+    --color-border: #0C2C55;
+    --color-shadow: rgba(12, 44, 85, 0.22);
+    --color-highlight: rgba(237, 237, 206, 0.65);
+
+    color: var(--color-ink);
+    background: var(--color-background);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 0;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 20px;
+
+    display: grid;
+    place-items: center;
+
+    color: var(--color-on-background);
+
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            var(--color-accent-light),
+            transparent 48%
+        ),
+        radial-gradient(
+            ellipse at 5% 90%,
+            var(--color-accent),
+            transparent 38%
+        ),
+        var(--color-background);
+}
+
+button {
+    font: inherit;
+}
+
+#container {
+    width: min(100%, 600px);
+    margin: auto;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.brand {
+    display: inline-block;
+
+    margin: 0 0 10px;
+
+    color: var(--color-accent-light);
+
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+
+    text-shadow: 1px 2px 0 var(--color-background);
+}
+
+h1 {
+    margin: 0;
+
+    font-size: clamp(2.3rem, 7vw, 3.5rem);
+    font-weight: 900;
+
+    letter-spacing: -0.055em;
+    line-height: 1.08;
+
+    text-transform: uppercase;
+
+    text-shadow: 2px 3px 0 var(--color-background);
+}
+
+h1 span {
+    color: var(--color-accent-light);
+}
+
+.intro-copy {
+    margin: 15px 0 0;
+
+    color: var(--color-on-background);
+
+    font-size: 0.96rem;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   MEME BANNER
+========================= */
+
+.meme-banner {
+    min-height: 116px;
+
+    margin-bottom: 20px;
+    padding: 12px 14px 12px 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 14px;
+    overflow: hidden;
+
+    border: 3px solid var(--color-ink);
+    border-radius: 16px;
+
+    background: var(--color-surface);
+    color: var(--color-ink);
+
+    box-shadow: 5px 5px 0 var(--color-ink);
+}
+
+.meme-caption {
+    min-width: 0;
+}
+
+.meme-tag {
+    display: inline-block;
+
+    padding: 4px 8px;
+
+    border: 2px solid var(--color-ink);
+    border-radius: 5px;
+
+    background: var(--color-accent-light);
+    color: var(--color-ink);
+
+    font-size: 0.64rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+
+    transform: rotate(-3deg);
+}
+
+.meme-caption p {
+    margin: 9px 0 0;
+
+    font-size: clamp(0.88rem, 3.4vw, 1.05rem);
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.meme-banner img {
+    width: 124px;
+    height: 88px;
+
+    flex: 0 0 124px;
+
+    border: 3px solid var(--color-ink);
+    border-radius: 10px;
+
+    object-fit: cover;
+    object-position: center 42%;
+
+    transform: rotate(3deg);
+}
+
+
+/* =========================
+   GENERATOR CARD
+========================= */
+
+.generator-card {
+    padding: clamp(22px, 6vw, 36px);
+
+    overflow: hidden;
+
+    border: 3px solid var(--color-ink);
+    border-radius: 20px;
+
+    background: var(--color-surface);
+    color: var(--color-ink);
+
+    box-shadow:
+        8px 8px 0 var(--color-ink),
+        inset 0 1px var(--color-highlight);
+}
+
+
+/* =========================
+   CARD HEADING
+========================= */
+
+.card-heading {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+    margin-bottom: 26px;
+}
+
+.lock-icon {
+    display: grid;
+
+    flex: 0 0 48px;
+
+    width: 48px;
+    height: 48px;
+
+    place-items: center;
+
+    border: 2px solid var(--color-ink);
+    border-radius: 12px;
+
+    background: var(--color-accent-light);
+    color: var(--color-ink);
+}
+
+.lock-icon svg {
+    width: 23px;
+    height: 23px;
+
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.6;
+}
+
+.card-heading h2,
+.card-heading p,
+.result-heading h3 {
+    margin: 0;
+}
+
+.card-heading h2 {
+    font-size: 1.08rem;
+    font-weight: 650;
+
+    letter-spacing: -0.025em;
+}
+
+.card-description {
+    margin-top: 5px !important;
+
+    color: var(--color-muted);
+
+    font-size: 0.83rem;
+}
+
+
+/* =========================
+   GENERATE BUTTON
+========================= */
+
+.get_pass {
+    width: 100%;
+    min-height: 76px;
+
+    padding: 8px 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    border: 3px solid var(--color-ink);
+    border-radius: 14px;
+
+    background: var(--color-accent-light);
+    color: var(--color-ink);
+
+    font-size: 0.96rem;
+    font-weight: 900;
+
+    cursor: pointer;
+
+    box-shadow: 0 6px 0 var(--color-ink);
+
+    transition:
+        transform 160ms ease,
+        background-color 160ms ease,
+        box-shadow 160ms ease;
+}
+
+.get_pass:hover {
+    transform: translateY(-2px) rotate(-0.5deg);
+
+    background: var(--color-surface);
+
+    box-shadow: 0 8px 0 var(--color-ink);
+}
+
+.get_pass:active {
+    transform: translateY(0);
+}
+
+.get_pass:focus-visible {
+    outline: 3px solid var(--color-accent-light);
+    outline-offset: 4px;
+}
+
+.button-arrow {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.button-meme {
+    width: 72px;
+    height: 52px;
+
+    flex: 0 0 72px;
+
+    border: 2px solid var(--color-ink);
+    border-radius: 8px;
+
+    object-fit: cover;
+    object-position: 50% 45%;
+
+    transform: rotate(-3deg);
+}
+
+.button-label {
+    flex: 1;
+
+    text-align: center;
+
+    text-shadow: 1px 1px 0 var(--color-surface);
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result {
+    margin-top: 30px;
+}
+
+.result-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.result-heading h3 {
+    color: var(--color-ink);
+
+    font-size: 0.84rem;
+    font-weight: 650;
+}
+
+.result-label {
+    color: var(--color-accent);
+
+    font-size: 0.62rem;
+    font-weight: 750;
+
+    letter-spacing: 0.14em;
+}
+
+.result ul {
+    min-height: 78px;
+
+    margin: 0;
+    padding: 14px;
+
+    display: grid;
+
+    gap: 9px;
+
+    list-style: none;
+
+    border: 2px dashed var(--color-ink);
+    border-radius: 12px;
+
+    background: rgba(98, 159, 173, 0.18);
+}
+
+.result ul:empty::before {
+    align-self: center;
+
+    color: var(--color-muted);
+
+    content: "Password yang dibuat akan muncul di sini";
+
+    font-size: 0.82rem;
+    text-align: center;
+}
+
+.result li {
+    padding: 12px 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+    overflow-wrap: anywhere;
+
+    border: 2px solid var(--color-ink);
+    border-radius: 9px;
+
+    background: var(--color-surface);
+    color: var(--color-ink);
+
+    font-family: "Cascadia Code", "Courier New", monospace;
+    font-size: 0.9rem;
+
+    letter-spacing: 0.025em;
+}
+
+.password-text {
+    min-width: 0;
+
+    overflow-wrap: anywhere;
+}
+
+.copy-password {
+    flex: 0 0 auto;
+
+    min-height: 34px;
+
+    padding: 0 12px;
+
+    border: 2px solid var(--color-ink);
+    border-radius: 8px;
+
+    background: var(--color-accent-light);
+    color: var(--color-ink);
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 160ms ease,
+        transform 160ms ease;
+}
+
+.copy-password:hover {
+    transform: translateY(-1px);
+
+    background: var(--color-surface);
+}
+
+.copy-password:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+.result-status {
+    min-height: 1.25em;
+
+    margin: 9px 2px 0;
+
+    color: var(--color-accent);
+
+    font-size: 0.76rem;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   CARD FOOTER
+========================= */
+
+.card-footer {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 22px;
+    padding-top: 18px;
+
+    border-top: 2px dashed var(--color-border);
+}
+
+.footer-icon {
+    color: var(--color-accent);
+
+    font-size: 1rem;
+}
+
+.card-footer p {
+    margin: 0;
+
+    color: var(--color-muted);
+
+    font-size: 0.76rem;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   PAGE NOTE
+========================= */
+
+.page-note {
+    margin: 24px 0 0;
+
+    color: var(--color-on-background);
+
+    font-size: 0.68rem;
+    font-weight: 900;
+
+    letter-spacing: 0.18em;
+
+    text-align: center;
+}
+
+.page-note span {
+    padding: 0 5px;
+
+    color: var(--color-accent-light);
+}
+
+
+/* =========================
+   RESPONSIVE — MOBILE
+========================= */
+
+@media (max-width: 480px) {
+    body {
+        padding: 34px 16px;
+    }
+
+    .intro {
+        margin-bottom: 24px;
+    }
+
+    .brand {
+        margin-bottom: 9px;
+        font-size: 0.7rem;
+        letter-spacing: 0.24em;
+    }
+
+    .intro-copy {
+        max-width: 300px;
+
+        margin-inline: auto;
+
+        font-size: 0.88rem;
+    }
+
+    .generator-card {
+        border-radius: 20px;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE — SMALL PHONE
+========================= */
+
+@media (max-width: 360px) {
+    body {
+        padding-inline: 12px;
+    }
+
+    h1 {
+        font-size: clamp(1.95rem, 10vw, 2.3rem);
+    }
+
+    .generator-card {
+        padding: 20px 16px;
+    }
+
+    .card-heading {
+        gap: 10px;
+    }
+
+    .lock-icon {
+        flex-basis: 40px;
+
+        width: 40px;
+        height: 40px;
+
+        border-radius: 12px;
+    }
+
+    .card-heading h2 {
+        font-size: 0.94rem;
+    }
+
+    .card-description {
+        font-size: 0.75rem;
+    }
+
+    .page-note {
+        font-size: 0.54rem;
+        letter-spacing: 0.12em;
+    }
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

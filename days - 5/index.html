@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0C2C55">
+    <meta name="description" content="PassForge adalah random password generator untuk membuat password yang kuat dan sulit ditebak.">
+    <title>Day 5 — PassForge | Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="container">
+
+        <header class="intro">
+            <p class="brand">PASSFORGE</p>
+
+            <h1>Password aman,<br><span>Hidup pun Tenang.</span></h1>
+
+            <p class="intro-copy">
+                Jangan pakai <strong>123456</strong> lagi yahh brader.
+                Bikin password random yang lebih susah ditebak!
+            </p>
+        </header>
+
+        <aside class="meme-banner" aria-label="Meme tentang password">
+            <div class="meme-caption">
+                <span class="meme-tag">REALITA</span>
+                <p>
+                    Password lama: <strong>123456</strong><br>
+                    Hacker: <strong>sedapnyooo</strong>
+                </p>
+            </div>
+
+            <img 
+                src="top_secret/gold.jpeg" 
+                alt="Meme dengan efek emas dramatis"
+            >
+        </aside>
+
+        <section class="generator-card" aria-labelledby="generator-title">
+
+            <div class="card-heading">
+                <div class="lock-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M7.5 10V7.5a4.5 4.5 0 0 1 9 0V10" />
+                        <rect x="5" y="10" width="14" height="11" rx="2.5" />
+                        <path d="M12 14.5v2" />
+                    </svg>
+                </div>
+
+                <div>
+                    <h2 id="generator-title">Mesin password random</h2>
+                    <p class="card-description">
+                        12 karakter. Huruf besar, kecil, dan angka. Gas?
+                    </p>
+                </div>
+            </div>
+
+            <div class="pass">
+                <button class="get_pass" type="button">
+                    <img 
+                        class="button-meme" 
+                        src="top_secret/hack.jpeg" 
+                        alt=""
+                    >
+
+                    <span class="button-label">
+                        HACK PASSWORD-NYA!
+                    </span>
+
+                    <span class="button-arrow" aria-hidden="true">
+                        ↗
+                    </span>
+                </button>
+            </div>
+
+            <section class="result" aria-labelledby="result-title">
+
+                <div class="result-heading">
+                    <h3 id="result-title">
+                        Password rahasia kamu
+                    </h3>
+
+                    <span class="result-label">
+                        JANGAN DI-SPILL
+                    </span>
+                </div>
+
+                <ul aria-live="polite" aria-relevant="additions text"></ul>
+
+                <p 
+                    class="result-status" 
+                    role="status" 
+                    aria-live="polite"
+                ></p>
+
+            </section>
+
+            <div class="card-footer">
+                <span class="footer-icon" aria-hidden="true">
+                    ✳
+                </span>
+
+                <p>
+                    Pakai password berbeda di tiap akun.
+                    Jangan sampai semua akun kena <strong>combo</strong>.
+                </p>
+            </div>
+
+        </section>
+
+        <p class="page-note">
+            PASSWORD KUAT <span>·</span> HACKER AUTO KESEL
+        </p>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
