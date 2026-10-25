@@ -78,12 +78,22 @@ body {
 .meme-slot {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 16px;
     min-height: 116px;
     padding: 16px;
+    overflow: hidden;
     border: 1px dashed var(--card-border);
     border-radius: 18px;
     background: var(--slot);
+}
+.meme-image {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 360px;
+    object-fit: contain;
 }
 .meme-placeholder {
     display: grid;
@@ -140,4 +150,3 @@ body.light-theme .theme-toggle { border-color: #efc8d0; background: #fff0f4; }
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
-
