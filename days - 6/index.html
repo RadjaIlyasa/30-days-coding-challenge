@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f3ed">
+    <meta name="description" content="Kuis singkat untuk menguji pengetahuan umum. Pilih bahasa dan mulai bermain.">
+    <title>Quiz Club — Kuis Pengetahuan Umum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <header class="topbar">
+            <a class="wordmark" href="./" aria-label="Quiz Club, beranda">
+                <span class="wordmark-mark" aria-hidden="true">q.</span>
+                <span>quiz club</span>
+            </a>
+            <div class="language-picker" role="group" aria-label="Pilih bahasa">
+                <button class="language-button is-active" type="button" data-language="id" aria-pressed="true">ID</button>
+                <span aria-hidden="true">/</span>
+                <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+            </div>
+        </header>
+
+        <section class="quiz-layout" aria-live="polite">
+            <div class="intro-column">
+                <p class="eyebrow" id="eyebrow">JEDA SEBENTAR, ASAH PIKIRAN</p>
+                <h1 id="page-title">Seberapa luas<br>rasa ingin tahumu<span class="title-period">?</span></h1>
+                <p class="intro-copy" id="intro-copy">Lima belas pertanyaan ringan tentang dunia di sekitar kita. Santai saja—yang penting coba dulu.</p>
+                <div class="edition-note">
+                    <span class="edition-number">06</span>
+                    <span id="edition-copy">Edisi pengetahuan umum<br>15 pertanyaan · pilihan ganda</span>
+                </div>
+            </div>
+
+            <div class="quiz-card" id="quiz-card">
+                <div class="card-topline">
+                    <span class="card-kicker" id="card-kicker">SIAP-SIAP</span>
+                    <span class="card-index" id="card-index">01 <span>/ 15</span></span>
+                </div>
+                <div class="progress-track" id="progress-track" role="progressbar" aria-label="Progres kuis" aria-valuemin="0" aria-valuemax="15" aria-valuenow="0">
+                    <span class="progress-fill" id="progress-fill"></span>
+                </div>
+
+                <div class="welcome-panel" id="welcome-panel">
+                    <div class="sparkle" aria-hidden="true">✳</div>
+                    <p class="welcome-label" id="welcome-label">KUIS PENGETAHUAN UMUM</p>
+                    <h2 id="welcome-title">Siap uji ingatan?</h2>
+                    <p class="welcome-copy" id="welcome-copy">Pilih jawaban yang paling tepat. Kamu akan langsung tahu apakah tebakanmu benar.</p>
+                    <button class="primary-button" id="start-button" type="button">
+                        <span id="start-label">Mulai kuis</span>
+                        <span aria-hidden="true">↗</span>
+                    </button>
+                    <p class="small-note" id="small-note">15 soal <span>·</span> tanpa batas waktu</p>
+                </div>
+
+                <div class="question-panel" id="question-panel" hidden>
+                    <div class="question-meta">
+                        <span class="category-pill" id="category-pill"></span>
+                        <span class="score-note" id="score-note"></span>
+                    </div>
+                    <h2 class="question-title" id="question-title"></h2>
+                    <div class="answer-list" id="answer-list"></div>
+                    <p class="answer-feedback" id="answer-feedback" role="status" aria-live="polite"></p>
+                    <button class="primary-button next-button" id="next-button" type="button" hidden>
+                        <span id="next-label">Pertanyaan berikutnya</span>
+                        <span aria-hidden="true">→</span>
+                    </button>
+                </div>
+
+                <div class="result-panel" id="result-panel" hidden>
+                    <div class="result-stamp" aria-hidden="true">✓</div>
+                    <p class="welcome-label" id="result-label">SELESAI</p>
+                    <h2 id="result-title">Kuis selesai!</h2>
+                    <p class="result-score"><strong id="final-score">0</strong><span id="score-total"> / 15</span></p>
+                    <p class="result-copy" id="result-copy"></p>
+                    <button class="primary-button" id="restart-button" type="button">
+                        <span id="restart-label">Coba lagi</span>
+                        <span aria-hidden="true">↻</span>
+                    </button>
+                </div>
+
+                <div class="card-footnote">
+                    <span class="footnote-dot" aria-hidden="true"></span>
+                    <span id="footnote">Nggak ada tekanan. Nikmati saja prosesnya.</span>
+                </div>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <span>QUIZ CLUB <span class="footer-divider">/</span> DAY 06</span>
+            <span id="footer-copy">Sedikit tahu, banyak seru.</span>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

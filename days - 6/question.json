@@ -1,0 +1,196 @@
+{
+  "en": [
+    {
+      "cat": "Geography",
+      "q": "What is the capital city of Australia?",
+      "opts": ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+      "ans": 2
+    },
+    {
+      "cat": "Science",
+      "q": "What is the chemical symbol for gold?",
+      "opts": ["Go", "Gd", "Au", "Ag"],
+      "ans": 2
+    },
+    {
+      "cat": "History",
+      "q": "In which year did World War II end?",
+      "opts": ["1943", "1944", "1945", "1946"],
+      "ans": 2
+    },
+    {
+      "cat": "Technology",
+      "q": "Who co-founded Apple Inc. along with Steve Jobs?",
+      "opts": ["Bill Gates", "Steve Wozniak", "Mark Zuckerberg", "Elon Musk"],
+      "ans": 1
+    },
+    {
+      "cat": "Nature",
+      "q": "What is the largest planet in our solar system?",
+      "opts": ["Saturn", "Neptune", "Uranus", "Jupiter"],
+      "ans": 3
+    },
+    {
+      "cat": "Culture",
+      "q": "Which country is the origin of the martial art 'Karate'?",
+      "opts": ["China", "Korea", "Japan", "Thailand"],
+      "ans": 2
+    },
+    {
+      "cat": "Math",
+      "q": "What is the value of Pi (π) to two decimal places?",
+      "opts": ["3.12", "3.14", "3.16", "3.18"],
+      "ans": 1
+    },
+    {
+      "cat": "Biology",
+      "q": "How many bones does an adult human body have?",
+      "opts": ["196", "206", "216", "226"],
+      "ans": 1
+    },
+    {
+      "cat": "Geography",
+      "q": "Which is the longest river in the world?",
+      "opts": ["Amazon", "Congo", "Nile", "Yangtze"],
+      "ans": 2
+    },
+    {
+      "cat": "Literature",
+      "q": "Who wrote the play 'Romeo and Juliet'?",
+      "opts": ["Charles Dickens", "William Shakespeare", "Leo Tolstoy", "Mark Twain"],
+      "ans": 1
+    },
+    {
+      "cat": "Science",
+      "q": "What is the approximate speed of light in a vacuum?",
+      "opts": ["200,000 km/s", "300,000 km/s", "400,000 km/s", "500,000 km/s"],
+      "ans": 1
+    },
+    {
+      "cat": "History",
+      "q": "Which empire was ruled by Julius Caesar?",
+      "opts": ["Greek", "Ottoman", "Roman", "Persian"],
+      "ans": 2
+    },
+    {
+      "cat": "Technology",
+      "q": "What does 'HTML' stand for?",
+      "opts": [
+        "Hyper Text Markup Language",
+        "High Text Machine Language",
+        "Hyper Transfer Markup Language",
+        "Hyper Text Make Language"
+      ],
+      "ans": 0
+    },
+    {
+      "cat": "Nature",
+      "q": "What is the hardest natural substance on Earth?",
+      "opts": ["Gold", "Iron", "Quartz", "Diamond"],
+      "ans": 3
+    },
+    {
+      "cat": "Culture",
+      "q": "The Eiffel Tower is located in which city?",
+      "opts": ["Rome", "Berlin", "Paris", "Madrid"],
+      "ans": 2
+    }
+  ],
+  "id": [
+    {
+      "cat": "Geografi",
+      "q": "Apa ibu kota negara Jepang?",
+      "opts": ["Osaka", "Tokyo", "Kyoto", "Hiroshima"],
+      "ans": 1
+    },
+    {
+      "cat": "Sains",
+      "q": "Unsur kimia dengan simbol 'O' adalah?",
+      "opts": ["Oksigen", "Osmium", "Ozon", "Onium"],
+      "ans": 0
+    },
+    {
+      "cat": "Sejarah",
+      "q": "Proklamasi kemerdekaan Indonesia dibacakan pada tanggal berapa?",
+      "opts": ["14 Agustus 1945", "15 Agustus 1945", "17 Agustus 1945", "18 Agustus 1945"],
+      "ans": 2
+    },
+    {
+      "cat": "Teknologi",
+      "q": "Siapakah pendiri perusahaan Microsoft?",
+      "opts": ["Steve Jobs", "Mark Zuckerberg", "Bill Gates", "Larry Page"],
+      "ans": 2
+    },
+    {
+      "cat": "Alam",
+      "q": "Gunung tertinggi di Indonesia adalah?",
+      "opts": ["Gunung Rinjani", "Gunung Semeru", "Gunung Puncak Jaya", "Gunung Kerinci"],
+      "ans": 2
+    },
+    {
+      "cat": "Budaya",
+      "q": "Tari Kecak berasal dari provinsi mana?",
+      "opts": ["Jawa Tengah", "Jawa Barat", "Bali", "Nusa Tenggara"],
+      "ans": 2
+    },
+    {
+      "cat": "Matematika",
+      "q": "Berapakah hasil dari 15 × 12?",
+      "opts": ["160", "170", "180", "190"],
+      "ans": 2
+    },
+    {
+      "cat": "Biologi",
+      "q": "Organ tubuh manusia yang berfungsi memompa darah adalah?",
+      "opts": ["Paru-paru", "Hati", "Jantung", "Ginjal"],
+      "ans": 2
+    },
+    {
+      "cat": "Geografi",
+      "q": "Selat yang memisahkan Pulau Jawa dan Sumatra adalah?",
+      "opts": ["Selat Bali", "Selat Karimata", "Selat Sunda", "Selat Lombok"],
+      "ans": 2
+    },
+    {
+      "cat": "Sastra",
+      "q": "Siapakah pengarang novel 'Laskar Pelangi'?",
+      "opts": [
+        "Pramoedya Ananta Toer",
+        "Andrea Hirata",
+        "Habiburrahman El Shirazy",
+        "Dee Lestari"
+      ],
+      "ans": 1
+    },
+    {
+      "cat": "Sains",
+      "q": "Planet terdekat dengan Matahari adalah?",
+      "opts": ["Venus", "Mars", "Merkurius", "Bumi"],
+      "ans": 2
+    },
+    {
+      "cat": "Sejarah",
+      "q": "Kerajaan Majapahit mencapai puncak kejayaannya di bawah pimpinan siapa?",
+      "opts": ["Raden Wijaya", "Hayam Wuruk", "Jayanegara", "Tribhuwana"],
+      "ans": 1
+    },
+    {
+      "cat": "Teknologi",
+      "q": "Kepanjangan dari 'Wi-Fi' adalah?",
+      "opts": ["Wireless Fidelity", "Wide Frequency", "Wireless Fiber", "Wide Fidelity"],
+      "ans": 0
+    },
+    {
+      "cat": "Alam",
+      "q": "Hewan apa yang dikenal sebagai 'Raja Hutan'?",
+      "opts": ["Harimau", "Singa", "Gajah", "Serigala"],
+      "ans": 1
+    },
+    {
+      "cat": "Budaya",
+      "q": "Batik resmi diakui oleh UNESCO sebagai warisan budaya Indonesia pada tahun?",
+      "opts": ["2007", "2008", "2009", "2010"],
+      "ans": 2
+    }
+  ]
+}
